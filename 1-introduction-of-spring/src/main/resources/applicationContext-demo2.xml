@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="country_with_bean_scope" class="com.edureka.spring.introductionofspring.demo2.beandefiitionandscope.Country">
+        <property name="state">
+            <bean id="state" class="com.edureka.spring.introductionofspring.demo2.beandefiitionandscope.State">
+                <property name="name" value="Edureka_State"/>
+            </bean>
+        </property>
+    </bean>
+
+    <alias name="country_with_bean_scope" alias="country_with_bean_scope_alias"/>
+
+    <bean name="lifeCycleBeanWithXML" class="com.edureka.spring.introductionofspring.demo2.beandefiitionandscope.LifecycleBean"
+        init-method="init" destroy-method="destroy"/>
+    <bean name="lifeCycleBeanWithInterfaces" class="com.edureka.spring.introductionofspring.demo2.beandefiitionandscope.LifecycleBeanWithInterfaces"/>
+
+</beans>

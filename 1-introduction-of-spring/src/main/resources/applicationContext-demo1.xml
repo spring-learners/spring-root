@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employee" class="com.edureka.spring.introductionofspring.demo.Employee">
+        <property name="name" value="Edureka_Employee"/>
+    </bean>
+
+    <bean id="companyWithSetter" class="com.edureka.spring.introductionofspring.demo.Company">
+        <property name="employee" ref="employee"/>
+    </bean>
+
+    <bean id="companyWithConstructor" class="com.edureka.spring.introductionofspring.demo.Company">
+        <constructor-arg ref="employee"/>
+    </bean>
+
+    <bean name="database" class="com.edureka.spring.introductionofspring.demo.Database">
+        <property name="noSqls">
+            <list>
+                <value>NoSql</value>
+                <value>Cassandra</value>
+                <value>HBase</value>
+            </list>
+        </property>
+    </bean>
+</beans>
