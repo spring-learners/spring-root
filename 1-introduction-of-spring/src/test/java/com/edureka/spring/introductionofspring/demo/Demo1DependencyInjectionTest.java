@@ -1,5 +1,7 @@
 package com.edureka.spring.introductionofspring.demo;
 
+import com.edureka.spring.introductionofspring.demo1.di.Company;
+import com.edureka.spring.introductionofspring.demo1.di.Database;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;

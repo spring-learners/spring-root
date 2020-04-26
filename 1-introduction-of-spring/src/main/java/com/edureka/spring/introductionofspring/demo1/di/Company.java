@@ -1,4 +1,4 @@
-package com.edureka.spring.introductionofspring.demo;
+package com.edureka.spring.introductionofspring.demo1.di;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
