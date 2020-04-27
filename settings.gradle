@@ -1,2 +1,3 @@
 rootProject.name = 'spring-root'
 include '1-introduction-of-spring'
+include '2-spring-configurations'
