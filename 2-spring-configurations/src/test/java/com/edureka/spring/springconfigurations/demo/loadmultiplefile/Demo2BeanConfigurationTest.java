@@ -45,10 +45,10 @@ public class Demo2BeanConfigurationTest {
 
     @Test
     public void shouldLoadAutoDiscoveryBean(){
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-demo2-annotation.xml");
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.edureka.spring.springconfigurations.demo2.beanconfiguration");
         SelfDiscoveredBean sdb = applicationContext.getBean(SelfDiscoveredBean.class);
         ((AbstractApplicationContext)applicationContext).registerShutdownHook();
         Assertions.assertThat(sdb).isNotNull();
-        //Assertions.assertThat(sdb.getServerPort()).isEqualTo(8080);
+        Assertions.assertThat(sdb.getServerPort()).isEqualTo(8080);
     }
 }
